@@ -28,6 +28,7 @@ function main() {
     
     my_model.set_controller(my_controller);
     my_view.set_controller(my_controller);
+    my_view.load_data();
 }
 
 window.addEventListener('load', () => { 

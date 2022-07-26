@@ -10,10 +10,18 @@ class View {
         this.f_test_btn();
         this.add_user_form();
 
+        
     }
 
     set_controller(controller) {
         this.controller = controller;
+    }
+
+    load_data() {
+        (async () => {
+            this.data = await this.controller.getData();
+            console.log(this.data);
+        })();
     }
 
     add_user_form() {
@@ -69,12 +77,12 @@ class View {
 
     }
 
-    f_test_btn() {
+    /* f_test_btn() {
         let test_btn = document.getElementsByClassName('test_btn')[0];
         test_btn.addEventListener('click', async () => {
             let data = await this.controller.getData();
             console.log(data);
         });
-    }
+    } */
 
 }

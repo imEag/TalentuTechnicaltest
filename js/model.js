@@ -69,21 +69,50 @@ class Model {
         // from birthday to age
         personData.age = this.date_to_age(personData.birthday);
 
-        //generating id
-
-
         // if data element does not exists in local storage it will create it.
         if (!localStorage.getItem('data')) {
+            personData.id = 1;
             localStorage.setItem('data', JSON.stringify([personData]));
         } else {
             //if data element does exists, it will add the object to the end.
             let data = JSON.parse(localStorage.getItem('data'));
+
+            //generating id
+            // get all existing ids
+            let ids = data.map(a => a.id);
+            //generate new id
+            let new_id = this.generate_id(ids);
+            //set new id
+            personData.id = new_id;
+
+            //Add personData to local storage
             data.push(personData);
             localStorage.setItem('data', JSON.stringify(data));
         }
 
         return true;
     }
+
+    generate_id(ids_array) {
+        //generates consecutive ids, takes le last id in ids array and adds 1.
+
+        let ids = this.remove_undefined(ids_array);
+        let new_id = Math.max(...ids) + 1;
+        if (new_id === -Infinity) new_id = 1;
+        return new_id;
+    }
+
+    remove_undefined(arr) {
+        var i = 0;
+        while (i < arr.length) {
+          if (arr[i] === undefined) {
+            arr.splice(i, 1);
+          } else {
+            ++i;
+          }
+        }
+        return arr;
+      }
 
     date_to_age(date) {
         // Converts date into age;
