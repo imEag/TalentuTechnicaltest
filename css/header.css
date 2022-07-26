@@ -89,6 +89,7 @@
 
 .submit_message_success {
     padding: .5rem;
+    color: var(--gray-dark);
     background-color: var(--green-light);
     margin: 0;
     border: .2rem solid var(--green-dark);
@@ -98,6 +99,7 @@
 .date_warning,
 .submit_message_failure {
     padding: .5rem;
+    color: var(--gray-dark);
     background-color: var(--red);
     margin: 0;
     border: .2rem solid var(--red-dark);
