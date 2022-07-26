@@ -59,10 +59,22 @@ class Model {
 
         //if argument is not an object method return false.
         if (typeof personData !== 'object') return false;
-        
+
+        // if any field is empty it will return false.
+        if (personData.email === '' || personData.first_name === '' || personData.last_name === '' || personData.birthday === '') return false;
+
+        // if given date is grater than today, return false
+        if (new Date(personData.birthday) > new Date()) return false;
+
+        // from birthday to age
+        personData.age = this.date_to_age(personData.birthday);
+
+        //generating id
+
+
         // if data element does not exists in local storage it will create it.
-        if(!localStorage.getItem('data')) {
-            localStorage.setItem('data', JSON.stringify(personData));
+        if (!localStorage.getItem('data')) {
+            localStorage.setItem('data', JSON.stringify([personData]));
         } else {
             //if data element does exists, it will add the object to the end.
             let data = JSON.parse(localStorage.getItem('data'));
@@ -71,6 +83,18 @@ class Model {
         }
 
         return true;
+    }
+
+    date_to_age(date) {
+        // Converts date into age;
+        var today = new Date();
+        var birthDate = new Date(date);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var month = today.getMonth() - birthDate.getMonth();
+        if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
     }
 
 }

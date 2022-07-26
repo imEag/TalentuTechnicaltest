@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Manager</title>
 </head>
+
 <body>
     <button class="test_btn">Click here!</button>
 
-    <form action="" class="form_test" id="form_test">
-        <label for="test_input">Testing input</label>
-        <input type="text" name="test_input" id="test_input">
+    <form action="" class="add_user_form" id="add_user_form">
+        <div class="email_container">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="email" id="email_input" required>
+        </div>
+        <div class="name_container">
+            <label for="name">name</label>
+            <input type="text" name="name" placeholder="name" id="name_input" required>
+        </div>
+        <div class="lastname_container">
+            <label for="lastname">lastname</label>
+            <input type="text" name="lastname" placeholder="lastname" id="lastname_input" required>
+        </div>
+        <div class="birthday_container">
+            <label for="birthday">birthday</label>
+            <input type="date" name="birthday" placeholder="birthday" id="birthday_input" required>
+        </div>
 
-        <input type="submit" id="submit_input" value="send">
+        <input type="submit" id="submit_input" value="Agregar usuario">
+        <div class="date_warning" style="display: none;">
+            <p>La fecha no puede ser mayor que hoy.</p>
+        </div>
+        <div class="submit_message_success" style="display: none;">
+            <p>Usuario agregado correctamente</p>
+        </div>
+        <div class="submit_message_failure" style="display: none;">
+            <p>El usuario no se pudo agregar.</p>
+        </div>
     </form>
 
     <script type="module" src="./js/controller.js"></script>
 </body>
+
 </html>

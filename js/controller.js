@@ -16,6 +16,7 @@ class Controller {
 
     setData(personData) {
         console.log(personData);
+
         return this.model.setData(personData);
     }
 }
