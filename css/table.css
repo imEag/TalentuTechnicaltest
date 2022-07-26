@@ -1,0 +1,40 @@
+.table_section {
+    margin: 6rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.table_section__title {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+table{
+    border-collapse: collapse;
+    border: .1rem solid var(--gray);
+    text-align: center;
+    font-size: var(--regular-font);
+    font-weight: var(--regular-weight);
+}
+
+thead {
+    font-weight: bold;
+}
+
+th, td {
+    border: .1rem solid var(--gray);
+    padding: 1rem;
+}
+
+th {
+    font-weight: var(--bold-weight);
+    font-size: var(--regular-font);
+    width: 20%;
+}
+
+th:nth-child(1), th:nth-child(3) {
+    width: 10%;
+}

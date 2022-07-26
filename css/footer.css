@@ -4,11 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+/* 
     position: fixed;
     bottom: 0;
-    width: 100%;
-    /* Height of the footer*/
+    width: 100%; */
 }
 
 .footer__p--container {
