@@ -79,7 +79,6 @@ class View {
         let success_message = document.getElementsByClassName('submit_message_success')[0];
         let failure_message = document.getElementsByClassName('submit_message_failure')[0];
 
-        console.log(success_message, failure_message);
         if (state === true) {
             success_message.style.display = 'flex';
             failure_message.style.display = 'none';
