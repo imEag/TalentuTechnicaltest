@@ -23,19 +23,23 @@ html {
     --gray-dark: #171a21;
     --gray: #c8c8c8;
     --gray-little-dark: #838383;
-    --green-dark: #138161;
+    --green-dark: #5f986e;
     --green-light: #c7f5eb;
     --blue-light: #e5f0ff;
-    --blue: #0066ff;
+    --blue:#4046ff;
     --blue-dark: #0046af;
     --red: rgb(255, 148, 148);
     --red-dark: rgb(250, 82, 82);
+    --dark-violet: #1a1550;
+    --violet: #702ec6;
+    --light-violet: #8b1cff;
     --roboto: 'Roboto', sans-serif;
     --inter: 'Inter', sans-serif;
+    --titillum: 'Titillium Web', sans-serif;
 }
 
 body {
-    font-family: var(--roboto);
+    font-family: var(--titillum);
     font-size: 1.6rem;
 }
 

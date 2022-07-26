@@ -8,8 +8,9 @@
 }
 
 .table_section__title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     margin: 1rem 0;
+    color: var(--light-violet);
 }
 
 .table{
@@ -22,6 +23,7 @@
 
 .table thead {
     font-weight: bold;
+    color: var(--light-violet);
 }
 
 .table th, .table td {
@@ -80,5 +82,6 @@
         padding-left: 1.5rem;
         text-align: left;
         font-weight: bold;
+        color: var(--light-violet);
     }
 }

@@ -1,10 +1,11 @@
 .footer {
-    background-color: var(--gray-light);
+    background-color: var(--dark-violet);
     padding: 10rem 0;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-/* 
+    /* 
     position: fixed;
     bottom: 0;
     width: 100%; */
