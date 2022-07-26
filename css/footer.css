@@ -1,0 +1,22 @@
+.footer {
+    background-color: var(--gray-light);
+    padding: 10rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/
+}
+
+.footer__p--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__p {
+    font-weight: bold;
+}

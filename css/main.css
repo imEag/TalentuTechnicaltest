@@ -1,0 +1,92 @@
+/* --- Config ---*/
+
+html {
+    font-size: 62.5%;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-light: #f7f7f8;
+    --gray-dark: #171a21;
+    --gray: #c8c8c8;
+    --gray-little-dark: #838383;
+    --green-dark: #138161;
+    --green-light: #c7f5eb;
+    --blue-light: #e5f0ff;
+    --blue: #0066ff;
+    --blue-dark: #0046af;
+    --red: rgb(255, 148, 148);
+    --red-dark: rgb(250, 82, 82);
+    --roboto: 'Roboto', sans-serif;
+    --inter: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--roboto);
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 96%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500) {
+    .container {
+        max-width: 98%;
+        margin: 0 auto;
+    }
+}
+
+/* Buttons */
+
+.btn {
+    font-weight: regular;
+    font-size: 1.6rem;
+    width: 20rem;
+    color: var(--white);
+    background-color: var(--blue);
+    border: 0.1rem solid var(--blue);
+    border-radius: 0.8rem;
+    padding: .8rem 2.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background-color: var(--blue-dark);
+}

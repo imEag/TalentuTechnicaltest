@@ -6,48 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/table.css">
 </head>
 
 <body>
     <!-- <button class="test_btn">Click here!</button> -->
 
     <header class="header">
-        <h1 class="header__title">Table Manager</h1>
+        <div class="header__title--container container">
+            <h1 class="header__title">Table Manager</h1>
+        </div>
 
-        <section class="form_section">
+        <section class="form_section container">
             <form action="" class="add_user_form" id="add_user_form">
-                <div class="email_container">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="email" id="email_input" required>
-                </div>
-                <div class="name_container">
-                    <label for="name">name</label>
-                    <input type="text" name="name" placeholder="name" id="name_input" required>
-                </div>
-                <div class="lastname_container">
-                    <label for="lastname">lastname</label>
-                    <input type="text" name="lastname" placeholder="lastname" id="lastname_input" required>
-                </div>
-                <div class="birthday_container">
-                    <label for="birthday">birthday</label>
-                    <input type="date" name="birthday" placeholder="birthday" id="birthday_input" required>
+                <div class="add_user_form_fields--container">
+                    <div class="email_container fields__field--container">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Email" id="email_input" required>
+                    </div>
+                    <div class="name_container fields__field--container">
+                        <label for="name">First name</label>
+                        <input type="text" name="name" placeholder="First name" id="name_input" required>
+                    </div>
+                    <div class="lastname_container fields__field--container">
+                        <label for="lastname">Last name</label>
+                        <input type="text" name="lastname" placeholder="Last name" id="lastname_input" required>
+                    </div>
+                    <div class="birthday_container fields__field--container">
+                        <label for="birthday">Birth day</label>
+                        <input type="date" name="birthday" placeholder="Birth day" id="birthday_input" required>
+                    </div>
                 </div>
 
-                <input type="submit" id="submit_input" value="Agregar usuario">
-                <div class="date_warning" style="display: none;">
-                    <p>La fecha no puede ser mayor que hoy.</p>
-                </div>
-                <div class="submit_message_success" style="display: none;">
-                    <p>Usuario agregado correctamente</p>
-                </div>
-                <div class="submit_message_failure" style="display: none;">
-                    <p>El usuario no se pudo agregar.</p>
+                <input type="submit" id="submit_input" class="submit_input btn" value="Agregar usuario">
+                <div class="warning_container">
+                    <div class="date_warning" style="display: none;">
+                        <p>La fecha no puede ser mayor que hoy.</p>
+                    </div>
+                    <div class="submit_message_success" style="display: none;">
+                        <p>Usuario agregado correctamente</p>
+                    </div>
+                    <div class="submit_message_failure" style="display: none;">
+                        <p>El usuario no se pudo agregar.</p>
+                    </div>
                 </div>
             </form>
         </section>
     </header>
 
-    <section class="table_section">
+    <section class="table_section container">
         <table class="table">
             <thead class="table__head">
                 <tr class="table__head__row">
@@ -64,12 +80,32 @@
                     <td class="body__age">20</td>
                     <td class="body__email">emma145@hotmail.es</td>
                 </tr>
+                <tr class="table__body__row">
+                    <td class="body__id">1</td>
+                    <td class="body__name">Emmanuel Arizabaleta</td>
+                    <td class="body__age">20</td>
+                    <td class="body__email">emma145@hotmail.es</td>
+                </tr>
+                <tr class="table__body__row">
+                    <td class="body__id">1</td>
+                    <td class="body__name">Emmanuel Arizabaleta</td>
+                    <td class="body__age">20</td>
+                    <td class="body__email">emma145@hotmail.es</td>
+                </tr>
+                <tr class="table__body__row">
+                    <td class="body__id">1</td>
+                    <td class="body__name">Emmanuel Arizabaleta</td>
+                    <td class="body__age">20</td>
+                    <td class="body__email">emma145@hotmail.es</td>
+                </tr>
             </tbody>
         </table>
     </section>
 
     <footer class="footer">
-        <p class="footer__p">Created by Emmanuel Arizabaleta Garces - 2022</p>
+        <div class="footer__p--container container">
+            <p class="footer__p">Created by Emmanuel Arizabaleta Garces - 2022</p>
+        </div>
     </footer>
 
     <script type="module" src="./js/controller.js"></script>
