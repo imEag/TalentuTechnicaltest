@@ -7,10 +7,7 @@ class View {
         this.controller = '';
         this.data = '';
 
-        this.f_test_btn();
         this.add_user_form();
-
-        
     }
 
     set_controller(controller) {
