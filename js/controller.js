@@ -15,8 +15,7 @@ class Controller {
     }
 
     setData(personData) {
-        console.log(personData);
-
+        //sens data to model and returns a boolean
         return this.model.setData(personData);
     }
 }
@@ -29,6 +28,7 @@ function main() {
     my_model.set_controller(my_controller);
     my_view.set_controller(my_controller);
     my_view.load_data();
+    
 }
 
 window.addEventListener('load', () => { 

@@ -17,8 +17,27 @@ class View {
     load_data() {
         (async () => {
             this.data = await this.controller.getData();
-            console.log(this.data);
+           /*  console.log(this.data); */
+            this.display_data();
         })();
+    }
+
+    display_data() {
+        const table_body = document.getElementById('table__body');
+        let html_code = '';
+
+        for (let person of this.data) {
+            if (person.age === undefined) person.age = 'Sin datos';
+
+            html_code += `<tr class="table__body__row">
+            <td data-label="ID" class="body__id">${person.id}</td>
+            <td data-label="Nombre" class="body__name">${person.first_name} ${person.last_name}</td>
+            <td data-label="Edad" class="body__age">${person.age}</td>
+            <td data-label="Email" class="body__email">${person.email}</td>
+        </tr>`;
+        }
+
+        table_body.innerHTML = html_code;
     }
 
     add_user_form() {
@@ -41,7 +60,7 @@ class View {
 
             let result = this.controller.setData(personData);
             this.save_message(result);
-
+            this.load_data();
         });
     }
 

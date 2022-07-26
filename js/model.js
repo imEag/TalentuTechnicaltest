@@ -51,7 +51,7 @@ class Model {
             localStorage.setItem('data', JSON.stringify(this.api_response.data));
         }
 
-        return localStorage.getItem('data');
+        return JSON.parse(localStorage.getItem('data'));
     }
 
     setData(personData) {
