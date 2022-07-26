@@ -12,7 +12,7 @@
     margin: 1rem 0;
 }
 
-table{
+.table{
     border-collapse: collapse;
     border: .1rem solid var(--gray);
     text-align: center;
@@ -20,21 +20,65 @@ table{
     font-weight: var(--regular-weight);
 }
 
-thead {
+.table thead {
     font-weight: bold;
 }
 
-th, td {
+.table th, .table td {
     border: .1rem solid var(--gray);
     padding: 1rem;
 }
 
-th {
+.table th {
     font-weight: var(--bold-weight);
     font-size: var(--regular-font);
     width: 20%;
 }
 
-th:nth-child(1), th:nth-child(3) {
+.table th:nth-child(1), .table th:nth-child(3) {
     width: 10%;
+}
+
+.table tr:nth-child(even) {
+    background-color: var(--gray-light);
+}
+
+@media (max-width: 650px) {
+    .table {
+        border: 0;
+    }
+    
+    .table thead {
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tbody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 20%;
+        text-align: right;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 30%;
+        padding-left: 1.5rem;
+        text-align: left;
+        font-weight: bold;
+    }
 }
