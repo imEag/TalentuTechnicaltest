@@ -18,8 +18,8 @@ Table Manager is an application for user managment with a responsive table.
 
 ## Screenshots
 
-![App Screenshot] (https://i.ibb.co/Sd1tQCv/mobiletablemanager.png)
-![App Screenshot] (https://i.ibb.co/xYFG78H/desktoptablemanage.png)
+![App Screenshot](https://i.ibb.co/Sd1tQCv/mobiletablemanager.png)
+![App Screenshot](https://i.ibb.co/xYFG78H/desktoptablemanage.png)
 
 ## License
 
