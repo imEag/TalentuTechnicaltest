@@ -23,7 +23,7 @@ Table Manager is an application for user managment with a responsive table.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[GNU](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 
 ### More projects:
