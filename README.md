@@ -1,6 +1,6 @@
-# Moviefy
+# table Manager
 
-talentu Table Manager is an application for user managment with a responsive table.
+Table Manager is an application for user managment with a responsive table.
 
 
 ## Features
