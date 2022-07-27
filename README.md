@@ -1,4 +1,4 @@
-# table Manager
+# Table Manager
 
 Table Manager is an application for user managment with a responsive table.
 
